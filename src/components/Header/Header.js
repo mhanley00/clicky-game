@@ -3,9 +3,9 @@ import "./Header.css";
 
 const Header = props => (
   <header className="header">
-    <h1>Clicky Game!</h1>
+    <h1>Pokemon Memory Game!</h1>
     <h2>
-      Click on an image to earn points, but don't click on any more than once!
+      Click on each Pokemon once to earn points.
     </h2>
   </header>
 );
