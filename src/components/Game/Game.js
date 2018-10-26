@@ -40,11 +40,27 @@ class Game extends Component {
       });
   };
 
-  resetGame = data => { //does not change
-      const resetData = data.map(item =>
-        ({...item, clicked:false}))
-        return this.shuffleData(resetData);
+//   resetGame = data => { //does not change
+//       const resetData = data.map(item =>
+//         ({...item, clicked:false}))
+//         return this.shuffleData(resetData);
+//   };
+
+resetData = data => {
+    const resetData = data.map(item => ({ ...item, clicked: false }));
+    return this.shuffleData(resetData);
   };
+
+//   shuffleData = data => {//does not change
+//       let i = data.length - 1;
+//       while (i>0){
+//           const j = Math.floor(Math.random()*(i +1));
+//           const temp = data[i];
+//           data[i] = data[j];
+//           data[j] = temp;
+//       }
+//       return data;
+//   };
 
   shuffleData = data => {//does not change
       let i = data.length - 1;
@@ -53,6 +69,7 @@ class Game extends Component {
           const temp = data[i];
           data[i] = data[j];
           data[j] = temp;
+          i--;
       }
       return data;
   };
